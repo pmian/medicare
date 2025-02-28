@@ -1,10 +1,10 @@
 <%- include("partials/header") -%>
 
-  <div class="box" id="heading">
+  <div class="box row justify-content-center align-elements-center" id="heading">
     <h1> <%= listTitle %> </h1>
   </div>
 
-  <div class="box">
+  <div class="box" >
 
 
   <%  newListItems.forEach(function(item){ %>
@@ -17,18 +17,27 @@
 
 
   <%  }) %>
-  <form class="" action="/list1" method="post">
-    <div class="form-group">
-      <label for="email">Doctor's Email</label>
-      <input type="email" class="form-control" name="usernamedc">
-    </div>
-    <div class="form-group">
-      <label for="date">Date</label>
-      <input type="date" class="form-control" name="date" min="2021-11-20" max="2022-01-20">
-    </div>
-    <button type="submit" class="btn btn-dark">Take appointment</button>
-  </form>
-
-
+  <div class="row justify-content-center align-elements-center">
+    <form class="" action="/list1" method="post">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <!-- <label for="email">Doctor's Email</label> -->
+            <div class="input-group"><input type="email" class="form-control" name="usernamedc" placeholder="Doctor's Email"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <!-- <label for="date">Date</label> -->
+            <div class="input-group"><input type="date" class="form-control" name="date" min="2021-11-20" max="2022-01-20"></div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block confirm-button">Take Appointment</button>
+    </form>
+  </div>
+  </div>
 
 <%- include("partials/footer") -%>

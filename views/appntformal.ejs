@@ -1,0 +1,93 @@
+<%- include('partials/header') %>
+
+<p><%=appnt_id%></p>
+<div class="box">
+
+
+<%  newListItems2.forEach(function(item){ %>
+
+
+    <div class="item">
+
+      <p><%=item.name%></p>
+    </div>
+
+
+<%  }) %>
+
+
+    <form class="item" action="/<%=appnt_id%>" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <button type="submit" name="list" value=" <%=appnt_id%> ">+</button>
+    </form>
+  <!-- weight -->
+    <div class="item">
+
+      <p><%=weight%></p>
+    </div>
+    <form class="item" action="/<%=appnt_id%>/weight" method="post">
+      <input type="text" name="updateweight" placeholder="Weight" autocomplete="off">
+      <button type="submit" name="weight" value=" <%=appnt_id%> ">Update Weight</button>
+    </form>
+    <!-- height -->
+    <div class="item">
+
+      <p><%=height%></p>
+    </div>
+    <form class="item" action="/<%=appnt_id%>/height" method="post">
+      <input type="text" name="updateheight" placeholder="Height" autocomplete="off">
+      <button type="submit" name="height" value=" <%=appnt_id%> ">Update Height</button>
+    </form>
+    <!-- bloodpressure -->
+    <div class="item">
+
+      <p><%=bloodpressure%></p>
+    </div>
+    <form class="item" action="/<%=appnt_id%>/bloodpressure" method="post">
+      <input type="text" name="updatebloodpressure" placeholder="Bloodpressure" autocomplete="off">
+      <button type="submit" name="bloodpressure" value=" <%=appnt_id%> ">Update BloodPressure</button>
+    </form>
+<!-- //image uploading -->
+<div>
+		<form action="/<%=appnt_id%>/reports" method="POST" enctype="multipart/form-data">
+			<div>
+				<label for="name">Image Title</label>
+				<input type="text" id="name" placeholder="Name"
+					value="" name="name" required>
+			</div>
+
+			<div>
+				<label for="image">Upload Image</label>
+				<input type="file" id="image"
+					name="image" value="" required>
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+
+	<hr>
+<form class="" action="/<%=appnt_id%>/renderimg" method="post">
+  <button type="submit" name="button">Click Here For The Docs</button>
+</form>
+<h3>Prescription</h3>
+<%  newListItems4.forEach(function(item){ %>
+
+
+    <div class="item">
+
+      <p><%=item.name%></p>
+    </div>
+
+
+<%  }) %>
+<div class="item">
+
+  <p><%=vidcall%></p>
+</div>
+<a href="/vid" target="_blank">Join Video call</a>
+
+</div>
+
+<%- include('partials/footer') %>

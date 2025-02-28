@@ -1,49 +1,59 @@
 <%- include('partials/header') %>
 
 
-<section id="title">
+  <section id="title">
 
     <!-- Nav Bar -->
-<div class="container-fluid">
+    <div class="container-fluid">
 
 
-    <nav class="navbar  navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="">tindog</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+      <nav class="navbar  navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">MediCare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#footer">Contact</a>
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#pricing">Pricing</a>
+              <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#cta">Download</a>
+              <a class="nav-link" href="#cta">Download</a>
             </li>
-        </ul>
-     </div>
-    </nav>
-
-
-    <!-- Title -->
-
-    <div class="row">
-     <div class="col-lg-6 ">
-
-
-      <h1>Meet new and interesting dogs nearby.</h1>
-      <a role="button" class="btn btn-dark btn-lg download-button" href="/register"> Register</a>
-      <a role="button" class="btn btn-outline-light btn-lg download-button" href="/login"> Login</a>
-
-    </div>
-    <div class="col-lg-6">
-      <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+          </ul>
         </div>
+      </nav>
+
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6 ">
+          <h1>Top doctors with just a click away.</h1>
+          <div class="dropdown">
+            <button class="dropbtn fnt-pad">Register</button>
+            <div class="dropdown-content">
+              <a role="button" class="btn btn-outline-light btn-m download-button" href="/registerdoc"> Doctor's Register</a>
+              <a role="button" class="btn btn-outline-light btn-m download-button" href="/register"> Patient's Register</a>
+            </div>
+          </div>
+          <div class="dropdown ">
+            <button class="dropbtn">Login</button>
+            <div class="dropdown-content">
+              <a role="button" class="btn btn-outline-light btn-m download-button" href="/logindoc">Doctor's Login</a>
+              <a role="button" class="btn btn-outline-light btn-m download-button" href="/login">Patient's Login</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img class="title-image" src="images/doctors-group.jpg">
+        </div>
+      </div>
     </div>
-</div>
   </section>
 
 
@@ -52,24 +62,31 @@
   <section id="features">
     <div class="row">
 
-
-<div class="feature col-lg-4">
-  <i class="icon fas fa-check-circle fa-4x"></i>
-  <h3>Easy to use.</h3>
-  <p>So easy to use, even your dog could do it.</p>
-</div>
-<div class="feature col-lg-4">
-  <i class="icon fas fa-bullseye fa-4x"></i>
-
-  <h3>Elite Clientele</h3>
-  <p>We have all the dogs, the greatest dogs.</p>
-</div>
-<div class="feature col-lg-4">
-  <i class="icon fas fa-heart fa-4x"></i>
-  <h3>Guaranteed to work.</h3>
-  <p>Find the love of your dog's life or your money back.</p>
-</div>
-</div>
+      <div class="feature col-lg-4">
+        <div class="card card__img--200x290 card-our-offerings">
+          <!-- <i class="icon fas fa-check-circle fa-4x"></i> -->
+          <img src="images/doctor.jpg" class="img-height">
+          <h3>Instant Video Consultation</h3>
+          <p>Connect within 60 sec</p>
+        </div>
+      </div>
+      <div class="feature col-lg-4">
+          <div class="card card__img--200x290 card-our-offerings">
+            <!-- <i class="icon fas fa-bullseye fa-4x"></i> -->
+            <img src="images/female-doctor.jpg" class="img-height">
+            <h3>Find Doctors Near You</h3>
+            <p>Confirmed appointments</p>
+          </div>
+      </div>
+      <div class="feature col-lg-4">
+          <div class="card card__img--200x290 card-our-offerings">
+            <!-- <i class="icon fas fa-heart fa-4x"></i> -->
+            <img src="images/deliveryboy.png" class="img-height">
+            <h3>Medicines</h3>  <br>
+            <p>Essentials at your doorsteps</p>
+          </div>
+      </div>
+    </div>
 
 
 
@@ -85,14 +102,16 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-          <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
-          <em>Pebbles, New York</em>
+          <h2 style="font-size: 2rem;">Very good app. Well thought out about booking/rescheduling/canceling an appointment. Also, Doctor's
+            feedback mechanism is good and describes all the basics in a good way.</h2>
+          <!-- <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile"> -->
+          <strong><em style="color: yellow;"><h3>-Pebbles, New York</h3></em></strong>
         </div>
         <div class="carousel-item">
-          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
-          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
-          <em>Beverly, Illinois</em>
+          <h2 class="testimonial-text" style="font-size: 2rem;">Very easy to book,maintain history. Hassle free from older versions of booking
+            appointment via telephone.. Thanks MediCare for making it simple.</h2>
+          <!-- <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile"> -->
+          <strong><em style="color: yellow;" ><h3>-Beverly, Illinois</h3></em></strong>
         </div>
 
       </div>
@@ -122,10 +141,17 @@
 
   </section>
 
+  <div class="pt-5 pb-5">
+    <h3 class="row justify-content-center align-elements-center" style="font-size: 7vh;">Read top articles </h3>
+    <h3 class="row justify-content-center align-elements-center" style="font-size: 7vh;">from health experts</h3>
+    <p style="text-align: center; font-size: 4vh;" >Health articles that keep you informed about<br> good health practices and achieve your goals.</p>
+    <p class="btn btn-primary " style="margin-left: 45%;"><a href="https://www.who.int/health-topics" class="text-white">See all articles</a></p>
+  </div>
+
 
   <!-- Pricing -->
 
-  <section class="white-section" id="pricing">
+  <!-- <section class="white-section" id="pricing">
 
     <h2 class="section-heading">A Plan for Every Dog's Needs</h2>
     <p>Simple and affordable price plans for your and your dog.</p>
@@ -183,19 +209,26 @@
 
     </div>
 
-  </section>
+  </section> -->
 
 
 
   <!-- Call to Action -->
 
   <section id="cta">
-
-    <h3 class="lasth3">Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button" class="btn btn-dark btn-lg download-button last"><i class="fab fa-apple"></i> Download</button>
-    <button type="button" class="btn btn-outline-light btn-lg download-button last"><i class="fab fa-google-play"></i> Download</button>
-
+    <div class="row">
+      <div class="col-sm">
+        <img src="images/doctor-bottom.jpg" style="height: 44vh; border-radius: 10px;">
+      </div>
+      <div class="col-sm ">
+      <div class="row p-3 mr-5"><h5 style="display: inline; color: yellow; font-size: 5vh;">" Access video consultation with India’s top doctors on the MediCare app. Connect with doctors online, available 24/7, from the comfort of your home. "</h5></div>
+      <div class="row d-flex justify-content-center mr-4"><button type="button" class="btn btn-dark btn-lg download-button last"><i class="fab fa-apple"></i>
+        Download</button>
+      <button type="button" class="btn btn-outline-light btn-lg download-button last"><i class="fab fa-google-play"></i>
+        Download</button>
+      </div>
+    </div>
   </section>
 
 
-<%- include('partials/footer') %>
+  <%- include('partials/footer') %>
